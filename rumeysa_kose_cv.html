@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rümeysa Köse | CV</title>
+<meta name="description" content="Rümeysa Köse - Bulut Bilişim Operatörlüğü öğrencisi">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+ font-family:Inter,Arial,sans-serif;color:#30243a;
+ background:linear-gradient(135deg,#fbf8ff,#f1e6ff 48%,#faf7ff);
+ line-height:1.6;overflow-x:hidden
+}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(5px);z-index:-1}
+body:before{width:300px;height:300px;background:#d9b8ff55;top:-90px;right:-70px}
+body:after{width:260px;height:260px;background:#b98cf755;bottom:-90px;left:-80px}
+nav{
+ position:fixed;top:0;left:0;width:100%;z-index:10;
+ backdrop-filter:blur(15px);background:#ffffffb8;border-bottom:1px solid #eadcff;
+}
+.nav-inner{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:21px;color:#8152b8}
+.logo span{color:#b783e8}
+nav a{color:#59496a;text-decoration:none;margin-left:22px;font-size:14px;font-weight:600}
+nav a:hover{color:#8a55c2}
+.hero{max-width:1100px;margin:0 auto;padding:145px 24px 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.badge{display:inline-block;padding:8px 14px;border-radius:30px;background:#ead8ff;color:#7545a8;font-size:13px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-3px;color:#30243a}
+h1 span{color:#965fd0}
+.hero p{margin:22px 0;color:#665a70;max-width:650px;font-size:17px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:14px;text-decoration:none;font-weight:700;font-size:14px;transition:.2s}
+.btn.primary{background:#9259ca;color:white;box-shadow:0 10px 25px #9259ca35}
+.btn.secondary{background:white;color:#7446a0;border:1px solid #dec9f2}
+.btn:hover{transform:translateY(-2px)}
+.profile-card{
+ background:linear-gradient(145deg,#ffffffd9,#f0e2ffdd);border:1px solid #e2cff5;
+ border-radius:30px;padding:34px;box-shadow:0 25px 70px #8f62b826;text-align:center
+}
+.avatar{width:145px;height:145px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;
+ background:linear-gradient(135deg,#b98ae7,#7e4bae);color:white;font-size:48px;font-weight:800;
+ box-shadow:0 15px 35px #8152b850}
+.profile-card h2{font-size:22px}.profile-card p{font-size:14px;margin:5px auto 18px}
+.status{display:inline-flex;align-items:center;gap:7px;background:#fff;padding:8px 12px;border-radius:20px;font-size:12px;color:#5b4d64}
+.dot{width:8px;height:8px;background:#72c98c;border-radius:50%}
+section{max-width:1100px;margin:auto;padding:80px 24px}
+.section-title{margin-bottom:35px}
+.section-title small{color:#955dc9;font-weight:800;text-transform:uppercase;letter-spacing:2px}
+.section-title h2{font-size:34px;margin-top:5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.card{background:#ffffffb8;border:1px solid #e6d7f2;border-radius:22px;padding:28px;box-shadow:0 12px 35px #75509010}
+.card h3{margin-bottom:12px;color:#6f4296}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill{padding:22px;border-radius:18px;background:#fff;border:1px solid #e7d9f3;transition:.2s}
+.skill:hover{transform:translateY(-5px);box-shadow:0 15px 30px #8152b820}
+.icon{font-size:27px;margin-bottom:9px}
+.skill strong{display:block;margin-bottom:5px}.skill span{font-size:13px;color:#75697d}
+.timeline{position:relative;padding-left:25px;border-left:2px solid #d8bbed}
+.item{position:relative;margin-bottom:26px;padding:20px 23px;background:#fff;border:1px solid #e6d7f2;border-radius:18px}
+.item:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:#9259ca;left:-32px;top:25px;box-shadow:0 0 0 5px #ead8ff}
+.item h3{font-size:17px}.item p{color:#706477;font-size:14px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-box{background:linear-gradient(135deg,#8f56c5,#b17ae1);color:white;border-radius:25px;padding:34px}
+.contact-box h2{font-size:30px;margin-bottom:10px}
+.contact-box p{color:#f5edfc}
+.email{margin-top:22px;display:inline-block;background:#ffffff22;padding:12px 16px;border-radius:12px;color:white;text-decoration:none}
+footer{text-align:center;padding:35px 20px;color:#75697d;font-size:13px;border-top:1px solid #e8dcf1}
+@media(max-width:800px){
+ nav a{display:none}.hero{grid-template-columns:1fr;padding-top:120px}.about,.contact{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){.skills{grid-template-columns:1fr}.hero{padding-top:110px}section{padding:60px 18px}.hero{padding-left:18px;padding-right:18px}}
+</style>
+</head>
+<body>
+<nav>
+ <div class="nav-inner">
+  <div class="logo">Rümeysa<span>.</span></div>
+  <div><a href="#hakkimda">Hakkımda</a><a href="#beceriler">Beceriler</a><a href="#egitim">Eğitim</a><a href="#iletisim">İletişim</a></div>
+ </div>
+</nav>
+
+<header class="hero">
+ <div>
+  <span class="badge">☁️ Bulut Bilişim Operatörlüğü Öğrencisi</span>
+  <h1>Merhaba, ben <span>Rümeysa.</span></h1>
+  <p>Bulut bilişim ve siber güvenlik alanlarında kendimi geliştiren, yeni teknolojiler öğrenmeye ve öğrendiklerimi uygulamaya odaklanan bir öğrenciyim.</p>
+  <div class="buttons">
+   <a class="btn primary" href="#iletisim">Benimle İletişime Geç</a>
+   <a class="btn secondary" href="#beceriler">Becerilerimi Gör</a>
+  </div>
+ </div>
+ <div class="profile-card">
+  <div class="avatar">RK</div>
+  <h2>Rümeysa Köse</h2>
+  <p>Bulut Bilişim Operatörlüğü</p>
+  <div class="status"><i class="dot"></i> Kendimi geliştirmeye devam ediyorum</div>
+ </div>
+</header>
+
+<section id="hakkimda">
+ <div class="section-title"><small>01 — Hakkımda</small><h2>Kendimi ve hedeflerimi tanıtayım.</h2></div>
+ <div class="about">
+  <div class="card">
+   <h3>Ben Kimim?</h3>
+   <p>Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi'nde Bulut Bilişim Operatörlüğü bölümünde eğitim görüyorum. Bilişim dünyasına olan ilgimi özellikle siber güvenlik ve bulut teknolojileri üzerine yoğunlaştırıyorum.</p>
+  </div>
+  <div class="card">
+   <h3>Hedefim</h3>
+   <p>Siber güvenlik alanında kendimi geliştirerek güçlü bir teknik altyapı oluşturmak, bulut teknolojilerini daha iyi öğrenmek ve gerçek projeler üzerinde deneyim kazanmak istiyorum.</p>
+  </div>
+ </div>
+</section>
+
+<section id="beceriler">
+ <div class="section-title"><small>02 — Teknik Alanlar</small><h2>Öğrendiğim ve geliştirdiğim alanlar.</h2></div>
+ <div class="skills">
+  <div class="skill"><div class="icon">🔐</div><strong>Siber Güvenlik</strong><span>Temel güvenlik konuları ve güvenli sistem yaklaşımı</span></div>
+  <div class="skill"><div class="icon">☁️</div><strong>AWS</strong><span>Bulut servisleri konusunda kendimi geliştiriyorum</span></div>
+  <div class="skill"><div class="icon">🐙</div><strong>GitHub</strong><span>Versiyon kontrolü ve proje paylaşımı öğreniyorum</span></div>
+  <div class="skill"><div class="icon">🖥️</div><strong>İşletim Sistemleri</strong><span>İşletim sistemi temelleri ve sistem yönetimi</span></div>
+  <div class="skill"><div class="icon">🌐</div><strong>Ağ Temelleri</strong><span>Ağ yapıları ve temel ağ teknolojileri</span></div>
+  <div class="skill"><div class="icon">💻</div><strong>Bulut Bilişim</strong><span>Bulut altyapıları ve temel cloud teknolojileri</span></div>
+ </div>
+</section>
+
+<section id="egitim">
+ <div class="section-title"><small>03 — Eğitim</small><h2>Eğitim hayatım.</h2></div>
+ <div class="timeline">
+  <div class="item">
+   <h3>Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi</h3>
+   <p><strong>Bulut Bilişim Operatörlüğü</strong></p>
+   <p>Siber Güvenlik · İşletim Sistemleri · Ağ Temelleri · Bulut Bilişim ve ilgili teknik dersler</p>
+  </div>
+ </div>
+</section>
+
+<section id="iletisim">
+ <div class="contact">
+  <div class="contact-box">
+   <h2>Birlikte bağlantı kuralım.</h2>
+   <p>Projeler, staj, kariyer veya bilişim alanındaki fırsatlar için benimle iletişime geçebilirsiniz.</p>
+   <a class="email" href="mailto:rumeysakose999@gmail.com">✉ rumeysakose999@gmail.com</a>
+  </div>
+  <div class="card">
+   <h3>Şu anda odaklandığım konular</h3>
+   <p>☁️ AWS ve bulut teknolojileri</p>
+   <p>🔐 Siber güvenlik</p>
+   <p>🐙 GitHub ve proje geliştirme</p>
+   <p>🌐 Ağ ve sistem teknolojileri</p>
+  </div>
+ </div>
+</section>
+
+<footer>© 2026 Rümeysa Köse · Kişisel CV Web Sitesi</footer>
+</body>
+</html>
